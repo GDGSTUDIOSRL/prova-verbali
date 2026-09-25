@@ -538,12 +538,13 @@ window.dispatchEvent(new Event('fb-ready'));
     .grid-menu{grid-template-columns:1fr;}
   }
   /* Tablet/iPad (portrait e landscape): la colonna centrale da 720px lasciava grandi fasce vuote
-     ai lati su schermi larghi >=700px, in entrambi gli orientamenti — qui la si allarga e si usa
-     una griglia a 3 colonne nella Home per sfruttare meglio lo spazio. */
+     ai lati su schermi larghi >=700px, in entrambi gli orientamenti — qui la si allarga. La griglia
+     resta a 2 colonne (stessa struttura del mobile): così "Nuovo verbale" e "Verbale riunione
+     iniziale" restano da soli, più larghi, sulla prima riga, e tutti gli altri pulsanti scalano di
+     conseguenza nella stessa griglia, allineati con quelli sopra. */
   @media (min-width:700px){
     #app,.brand-header{max-width:1100px;}
     .fab{max-width:1072px;}
-    .grid-menu{grid-template-columns:repeat(3,1fr);}
   }
   .btn,.iconbtn,.chip,.menu-btn,.item-row .actions button{min-height:40px;}
   input[type=checkbox],input[type=radio]{min-width:18px;min-height:18px;}

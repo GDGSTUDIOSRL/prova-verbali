@@ -537,6 +537,14 @@ window.dispatchEvent(new Event('fb-ready'));
     .row3{grid-template-columns:1fr;}
     .grid-menu{grid-template-columns:1fr;}
   }
+  /* Tablet/iPad (portrait e landscape): la colonna centrale da 720px lasciava grandi fasce vuote
+     ai lati su schermi larghi >=700px, in entrambi gli orientamenti — qui la si allarga e si usa
+     una griglia a 3 colonne nella Home per sfruttare meglio lo spazio. */
+  @media (min-width:700px){
+    #app,.brand-header{max-width:1100px;}
+    .fab{max-width:1072px;}
+    .grid-menu{grid-template-columns:repeat(3,1fr);}
+  }
   .btn,.iconbtn,.chip,.menu-btn,.item-row .actions button{min-height:40px;}
   input[type=checkbox],input[type=radio]{min-width:18px;min-height:18px;}
 
